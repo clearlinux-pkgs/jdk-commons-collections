@@ -4,7 +4,7 @@
 #
 Name     : jdk-commons-collections
 Version  : 3.2.2
-Release  : 1
+Release  : 2
 URL      : http://www.apache.org/dist/commons/collections/source/commons-collections-3.2.2-src.tar.gz
 Source0  : http://www.apache.org/dist/commons/collections/source/commons-collections-3.2.2-src.tar.gz
 Summary  : No detailed summary available
@@ -133,7 +133,7 @@ data components for the jdk-commons-collections package.
 python3 /usr/share/java-utils/mvn_file.py ':commons-collections{,-testframework}' apache-commons-collections@1 commons-collections@1
 
 %build
-python3 /usr/share/java-utils/mvn_build.py
+python3 /usr/share/java-utils/mvn_build.py ; python3 /usr/share/java-utils/mvn_artifact.py commons-collections:commons-collections-testframework:3.2.2 target/commons-collections-testframework-3.2.2.jar
 
 %install
 xmvn-install  -R .xmvn-reactor -n commons-collections-3.2.2-src -d %{buildroot}
@@ -143,7 +143,9 @@ xmvn-install  -R .xmvn-reactor -n commons-collections-3.2.2-src -d %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/apache-commons-collections-testframework.jar
 /usr/share/java/apache-commons-collections.jar
+/usr/share/java/commons-collections-testframework.jar
 /usr/share/java/commons-collections.jar
 /usr/share/maven-metadata/commons-collections-3.2.2-src.xml
 /usr/share/maven-poms/apache-commons-collections.pom

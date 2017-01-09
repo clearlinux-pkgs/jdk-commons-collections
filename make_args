@@ -1,0 +1,1 @@
+; python3 /usr/share/java-utils/mvn_artifact.py commons-collections:commons-collections-testframework:3.2.2 target/commons-collections-testframework-3.2.2.jar
