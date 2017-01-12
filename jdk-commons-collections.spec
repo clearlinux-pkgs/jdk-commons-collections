@@ -4,7 +4,7 @@
 #
 Name     : jdk-commons-collections
 Version  : 3.2.2
-Release  : 2
+Release  : 3
 URL      : http://www.apache.org/dist/commons/collections/source/commons-collections-3.2.2-src.tar.gz
 Source0  : http://www.apache.org/dist/commons/collections/source/commons-collections-3.2.2-src.tar.gz
 Summary  : No detailed summary available
